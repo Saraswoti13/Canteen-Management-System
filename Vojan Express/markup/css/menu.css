@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Habibi, sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: #F2780D;
+    border-radius: 40px;
+}
+
+.main-container {
+    padding: 0px;
+    background-color: #fff;
+    border-radius: 40px;
+}
+
+.site-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    color: #fff;
+}
+
+.logo img {
+    width: 80%;
+}
+
+.search-bar input {
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    padding: 16px 0px 16px 70px;
+    background-color: #fff;
+    border: none;
+    position: relative;
+}
+
+.search-icon img {
+    width: 65%;
+}
+
+.search-icon {
+    position: absolute;
+    top: 4.5%;
+    left: 38%;
+}
+
+.profile a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: #ED8B35;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.sidebar {
+    width: 14%;
+    height: 500px;
+    background-color: #fff;
+    border:2px solid #BFC0C0 ;
+    border-radius: 40px 0px 0px;
+    padding: 35px 0px 35px 35px;
+}
+
+.sidebar h1 {
+    color: #F2780D;
+    font-size: 20px;
+    font-weight: 400px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 30px 0;
+}
+
+.menu ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu .menu-btn {
+    background-color: #F2780D;
+    padding: 5px;
+}
+
+.menu ul li:hover {
+    cursor: pointer;
+    background-color: #F2780D;
+    padding-left: 20px;
+}
+
+.icon {
+    margin-right: 15px;
+}
+
+.content {
+    flex: 1;
+    margin: 2% 0% 0% 2%;
+}
+
+.balance .promo img {
+    width: 100%;
+}
+
+.blnc-container .topic {
+    display: flex;
+    gap: 50%;
+}
+
+.blnc-container {   
+    width: 75%;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #fca052;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2%;
+    position: relative;
+}
+
+.balance-container,
+.rfid-container {
+    width: 38%;
+    background-color: #FC8019;
+    border-radius: 10px;
+    padding: 20px 20px 10px 20px;
+}
+
+.balance-container a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.rfid-container a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+}
+
+.balance-container p,
+.rfid-container p {
+    font-size: 20px;
+    color: #fff;
+    padding: 2px;
+}
+
+.balance-container button {
+    margin-left: 49%;
+    padding: 8px 10px;
+    background-color: #ff000f;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.rfid-container button {
+    margin-left: 48%;
+    padding: 8px 10px;
+    background-color: #F6C297;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.rfid-container {
+    position: absolute;
+    bottom: 7.9%;
+    right: 2%;
+}
+
+.balance-container button:hover {
+    background: #ED8B35;
+}
+
+.rfid-container button:hover {
+    background-color: #fff;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #F2780D;
+}
+
+.veg .row,
+.non-veg .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.veg .veg-options,
+.non-veg .non-veg {
+    background: #fff;
+    border: 1px solid #AEACAC;
+    padding: 40px 30px 20px 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.veg p,
+.non-veg p {
+    text-align: center;
+    padding: 5px 0px 20px 0px;
+    cursor: pointer;
+}
+
+.veg .icon,
+.non-veg .icon {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.icon span {
+    color: #F2780D;
+    cursor: pointer;
+}
+
+.drinks {
+    margin: 20px;
+}
+
+.drinks-category {
+    background: #fff;
+    border: 1px solid #F2780D;
+    padding: 10px 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.drink-topic {
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: underline;
+    padding: 20px 10px;
+}
+
+.drinks-row, .drink-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    background: #fff;
+}
+
+.drink-item {
+    border: 1px solid #D6D5D5;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.drinks-row h4 {
+    margin: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.drinks-row p {
+    color: #F2780D;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.drink-item img {
+    width: auto;
+    cursor: pointer;
+}
+
+.order-now {
+    margin: 2% 0% 1% 44%;
+    padding: 10px 30px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #FC8019;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.order-now a {
+    text-align: center;
+    text-decoration: none;
+    color: #F2780D;
+}
+
+.order-now:hover {
+    background-color: #F2780D;
+} 
+
+.order-now a:hover {
+    color: #fff;
+}
+
+.footer {
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 100%;
+    height: 24px;
+    margin: 5px;
+}
