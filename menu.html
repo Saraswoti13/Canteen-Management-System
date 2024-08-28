@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vojan Express</title>
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Habibi,wght@0,400;1,400;" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Habibi:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="What do you want to eat today?">
+            <i class="search-icon"><img src="images/search.svg" alt="search"></i>
+        </div>
+        <div class="profile">
+            <img src="images/profile.png" alt="Profile Icon">
+            <a href="setting.html">Nimesh Basnet</a>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="site-main">
+                <div class="slide">
+                    <h1 class="menu-title">Main Menu</h1>
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                        <li><a href="menu.html"><i class="fas fa-book"></i> Menu</a></li>
+                        <li><a href="order.html"><i class="fas fa-receipt"></i> Order</a></li>
+                        <li><a href="setting.html"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <section class="content">
+                    <div class="blnc-container">
+                        <div class="topic">
+                            <span>Your Balance</span>
+                            <span>Your RFID</span>
+                        </div>
+                        <div class="detail-container">
+                            <div class="balance-container">
+                                <p>Balance <br> Rs. <strong>XXXXX</strong></p>
+                                <button><a href="form.html" class="blnc">Add Balance</a></button>
+                            </div>
+                            <div class="rfid-container">
+                                <p>ID Number <br> XXXXXXXXXXX</p>
+                                <button><a href="setting.html" class="id">Add Details</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo">
+                        <img src="images/offer.png" alt="promo image">
+                    </div>
+                </section>
+            </div>
+            <section class="veg">
+                <h2>Veg Options</h2>
+                <div class="row">
+                    <div class="veg-options">
+                        <img src="images/puri.jpg" alt="puri">
+                        <p>Puri Tarkari</p>
+                        <div class="icon">
+                            <span>Rs.90/per plate</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                    <div class="veg-options">
+                        <img src="images/samosa.jpg" alt="samosa">
+                        <p>Samosa</p>
+                        <div class="icon">
+                            <span>Rs.100/per plate</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                    <div class="veg-options">
+                        <img src="images/noodles.jpg" alt="noodles">
+                        <p>Noodles</p>
+                        <div class="icon">
+                            <span>Rs.50/per plate</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="veg-options">
+                        <img src="images/alooparatha.jpg" alt="paratha">
+                        <p>Aloo Paratha</p>
+                        <div class="icon">
+                            <span>Rs.50/per piece</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                    <div class="veg-options">
+                        <img src="images/pakoda.jpg" alt="pakoda">
+                        <p>Pakoda</p>
+                        <div class="icon">
+                            <span>Rs.50/per plate</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                    <div class="veg-options">
+                        <img src="images/samosachaat.jpg" alt="samosa-chaat">
+                        <p>Samosa Chaat</p>
+                        <div class="icon">
+                            <span>Rs.80/per plate</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="non-veg">
+                <h2>Non-Veg Options</h2>
+                <div class="row">
+                    <div class="non-veg">
+                        <img src="images/chickenpakoda.jpg" alt="pakoda">
+                        <p>Chicken Pakoda</p>
+                        <div class="icon">
+                            <span>Rs.80/per plate</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                    <div class="non-veg">
+                        <img src="images/boiledegg.jpg" alt="egg">
+                        <p>Boiled Egg</p>
+                        <div class="icon">
+                            <span>Rs.30/per piece</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                    <div class="non-veg">
+                        <img src="images/eggrice.jpg" alt="fryrice">
+                        <p>Egg Fry Rice</p>
+                        <div class="icon">
+                            <span>Rs.110/per plate</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="non-veg">
+                        <img src="images/chickensyabhale.jpg" alt="syabhale">
+                        <p>Chicken Syabhale</p>
+                        <div class="icon">
+                            <span>Rs.35/per piece</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                    <div class="non-veg">
+                        <img src="images/chickenmomo.jpg" alt="momo">
+                        <p>Chicken Momo</p>
+                        <div class="icon">
+                            <span>Rs.160/per plate</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                    <div class="non-veg">
+                        <img src="images/chickenchowmein.jpg" alt="chowmein">
+                        <p>Chicken Chowmein</p>
+                        <div class="icon">
+                            <span>Rs.120/per plate</span>
+                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="drinks">
+                <h2>Drinks</h2>
+                <div class="drinks-category">
+                    <div class="drink">
+                        <h3>Hot Drinks</h3>
+                        <h3>Cold Drinks</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/milktea.jpg" alt="Milk Tea">
+                            <h4>Milk Tea</h4>
+                            <div class="drink-info">
+                                <p>Rs. 25</p>
+                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="images/coke.jpg" alt="Coke">
+                            <h4>Coke</h4>
+                            <div class="drink-info">
+                                <p>Rs. 35</p>
+                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-category">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/blacktea.jpg" alt="Black Tea">
+                            <h4>Black Tea</h4>
+                            <div class="drink-info">
+                                <p>Rs. 20</p>
+                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="images/dahi.jpg" alt="Dahi">
+                            <h4>Dahi</h4>
+                            <div class="drink-info">
+                                <p>Rs. 40</p>
+                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-category">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/coffee.jpg" alt="Coffee">
+                            <h4>Coffee</h4>
+                            <div class="drink-info">
+                                <p>Rs. 35</p>
+                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="images/lassi.jpg" alt="Lassi">
+                            <h4>Lassi</h4>
+                            <div class="drink-info">
+                                <p>Rs. 90</p>
+                                <div class="cart-button">
+                                    <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks-category">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/hotlemon.jpg" alt="Hot Lemon">
+                            <h4>Hot Lemon</h4>
+                            <div class="drink-info">
+                                <p>Rs. 20</p>
+                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="images/mangojuice.jpg" alt="Mango Juice">
+                            <h4>Mango Juice</h4>
+                            <div class="drink-info">
+                                <p>Rs. 60</p>
+                                <button id="cartBtn" type="button" onclick="addToCart()">&#128722;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="cart"><a href="order.html">GO TO CART</a></button>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <p>Get In Touch</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/fab.svg" alt="Facebook"></a>
+                <a href="#"><img src="images/inst.svg" alt="Instagram"></a>
+                <a href="#"><img src="images/pin.svg" alt="pinterest"></a>
+            </div>
+            <p>&copy; Krima. All Rights Reserved 2024. Licensing</p>
+        </div>
+    </footer>
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Habibi, sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: #F2780D;
+}
+
+.main-container {
+    margin: auto;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 40px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    color: #fff;
+}
+
+.logo img {
+    width: 85%;
+}
+
+.search-bar input {
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    padding: 16px 0px 16px 70px;
+    background-color: #fff;
+    border: none;
+    position: relative;
+}
+
+.search-icon img {
+    width: 65%;
+    position: static;
+}
+
+.search-icon {
+    position: absolute;
+    top: 4.5%;
+    left: 37%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: #ED8B35;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.profile a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-main {
+    display: flex;
+    gap: 20px;
+}
+
+.slide {
+    width: 13%;
+    height: 500px;
+    background: #fff;
+    border: 2px solid #d9d9d9;
+    border-radius: 40px 0 0 0;
+}
+
+h1 {
+    color: #F2780D;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    margin: 5px 0px;
+    pointer-events: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    color: #000;
+    padding: 20px 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+ul li:hover a {
+    color: #fff;
+    background: #F2780D;
+}
+
+ul li a i {
+    text-align: center;
+    width: 40px;
+}
+
+.logout-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.logout-btn a {
+    padding-right: 5px;
+    text-decoration: none;
+}
+
+.logout-btn a:hover {
+    text-decoration: underline;
+    color: #F2780D;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: start;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px 0 20px 10px;
+    border-radius: 40px;
+}
+
+.logout-btn a {
+    font-size: 18px;
+    text-align: end;
+    color: #000;
+}
+
+.logout-btn a i {
+    padding: 5px;
+}
+
+.edit-container {
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid #F2780D;
+    padding: 40px 50px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-photo {
+    display: flex;
+    gap: 5%;
+}
+
+.photo-buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.photo-buttons .add-photo {
+    background-color: #F2780D;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.photo-buttons .remove-photo {
+    background-color: #fff;
+    border: 1px solid #F2780D;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #F2780D;
+    cursor: pointer;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #d7b7b7;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discard-button, .save-button {
+    background-color: #f9a826;
+    border: none;
+    margin: 10px 0px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.discard-button {
+    background-color: #F2780D;
+    padding: 5px 10px;
+}
+
+.save-button {
+    background-color: #fff;
+    color: #F2780D;
+    border: 1px solid #F2780D;
+    padding: 5px 20px;
+}
+
+.footer {
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 100%;
+    height: 24px;
+    margin: 5px;
+}

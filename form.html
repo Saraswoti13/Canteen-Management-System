@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vojan Express</title>
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Habibi,wght@0,400;1,400;" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Habibi:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="profile">
+            <img src="images/profile.png" alt="Profile Icon">
+            <a href="setting.html">Nimesh Basnet</a>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="site-main">
+            <div class="slide">
+                <h1 class="menu-title">Main Menu</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li><a href="menu.html"><i class="fas fa-book"></i> Menu</a></li>
+                    <li><a href="order.html"><i class="fas fa-receipt"></i> Order</a></li>
+                    <li><a href="setting.html"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone"></i> Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="form-container">
+                    <form id="rfid-form">
+                        <div class="topic">
+                            <h2>RFID Registration Form</h2>
+                        </div>
+                        <p class="instructions">*Please fill out the details below to complete your registration.
+                        </p>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+
+                            <label for="id">ID Number</label>
+                            <input type="text" id="id" name="id">
+
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address">
+
+                            <div class="date-container">
+                                <div class="date-field">
+                                    <label for="issuance-date">Issuance Date</label>
+                                    <input type="date" id="issuance-date" name="issuance-date">
+                                </div>
+                                <div class="date-field">
+                                    <label for="expiry-date">Expiry Date</label>
+                                    <input type="date" id="expiry-date" name="expiry-date">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" id="submit-btn"><a href="index.html">SUBMIT</a></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>Get In Touch</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/fab.svg" alt="Facebook"></a>
+                <a href="#"><img src="images/inst.svg" alt="Instagram"></a>
+                <a href="#"><img src="images/pin.svg" alt="pinterest"></a>
+            </div>
+            <p>&copy; VojanExpress. All Rights Reserved 2024.Licensing</p>
+        </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+
+
+</body>
+
+</html>
