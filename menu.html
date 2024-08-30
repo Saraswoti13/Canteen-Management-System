@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg" href="images/tab-logo.svg">
     <link rel="stylesheet" href="css/menu.css">
 </head>
 
@@ -24,18 +25,25 @@
             <img src="images/logo.png" alt="Logo">
         </div>
         <div class="search-bar">
-            <input type="text" placeholder="What do you want to eat today?">
-            <i class="search-icon"><img src="images/search.svg" alt="search"></i>
+            <input type="text" placeholder="Search...">
         </div>
-        <div class="profile">
-            <img src="images/profile.png" alt="Profile Icon">
-            <a href="setting.html">Nimesh Basnet</a>
+        <div class="profile-content">
+            <div class="add-to-cart">
+                <a class="cart" href="#" onclick="toggleCartPopup()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+            <div class="profile">
+                <img src="images/profile.png" alt="Profile Icon">
+                <a href="setting.html">Nimesh Basnet</a>
+            </div>
         </div>
     </header>
     <main>
         <div class="main-container">
             <div class="site-main">
-                <div class="slide">
+                <aside class="slide">
                     <h1 class="menu-title">Main Menu</h1>
                     <ul class="nav-links">
                         <li><a href="index.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
@@ -44,8 +52,25 @@
                         <li><a href="setting.html"><i class="fas fa-cog"></i> Settings</a></li>
                         <li><a href="contact.html"><i class="fas fa-phone"></i> Contact Us</a></li>
                     </ul>
-                </div>
-                <section class="content">
+                </aside>
+
+                <div class="content">
+                    <div id="cart-popup" class="cart-count">
+                        <h4>Order Cart</h4>
+                        <table id="cart-items">
+                            <thead>
+                                <tr>
+                                    <th>Food</th>
+                                    <th>#</th>
+                                    <th>Price(Rs.)</th>
+                                    <th>Total(Rs.)</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <p>Total(Rs.) <span id="cart-total">0.00</span></p>
+                        <a class="cart-close" onclick="closeCart()"><i class="fas fa-times"></i></a>
+                    </div>
                     <div class="blnc-container">
                         <div class="topic">
                             <span>Your Balance</span>
@@ -65,7 +90,7 @@
                     <div class="promo">
                         <img src="images/offer.png" alt="promo image">
                     </div>
-                </section>
+                </div>
             </div>
             <section class="veg">
                 <h2>Veg Options</h2>
@@ -75,7 +100,10 @@
                         <p>Puri Tarkari</p>
                         <div class="icon">
                             <span>Rs.90/per plate</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Puri Tarkari', 90.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                     <div class="veg-options">
@@ -83,7 +111,10 @@
                         <p>Samosa</p>
                         <div class="icon">
                             <span>Rs.100/per plate</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Samosa', 100.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                     <div class="veg-options">
@@ -91,7 +122,10 @@
                         <p>Noodles</p>
                         <div class="icon">
                             <span>Rs.50/per plate</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Noodles', 50.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -101,7 +135,10 @@
                         <p>Aloo Paratha</p>
                         <div class="icon">
                             <span>Rs.50/per piece</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Aloo Paratha', 50.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                     <div class="veg-options">
@@ -109,7 +146,10 @@
                         <p>Pakoda</p>
                         <div class="icon">
                             <span>Rs.50/per plate</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Pakoda', 50.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                     <div class="veg-options">
@@ -117,7 +157,10 @@
                         <p>Samosa Chaat</p>
                         <div class="icon">
                             <span>Rs.80/per plate</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Samosa Chaat', 80.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,7 +173,10 @@
                         <p>Chicken Pakoda</p>
                         <div class="icon">
                             <span>Rs.80/per plate</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Chicken Pakoda', 80.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                     <div class="non-veg">
@@ -138,7 +184,10 @@
                         <p>Boiled Egg</p>
                         <div class="icon">
                             <span>Rs.30/per piece</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Boiled Egg', 30.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                     <div class="non-veg">
@@ -146,7 +195,10 @@
                         <p>Egg Fry Rice</p>
                         <div class="icon">
                             <span>Rs.110/per plate</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Egg Fry Rice', 110.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -156,7 +208,10 @@
                         <p>Chicken Syabhale</p>
                         <div class="icon">
                             <span>Rs.35/per piece</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Chicken Syabhale', 35.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                     <div class="non-veg">
@@ -164,7 +219,10 @@
                         <p>Chicken Momo</p>
                         <div class="icon">
                             <span>Rs.160/per plate</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Chicken Momo', 160.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                     <div class="non-veg">
@@ -172,7 +230,10 @@
                         <p>Chicken Chowmein</p>
                         <div class="icon">
                             <span>Rs.120/per plate</span>
-                            <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                            <div class="button">
+                                <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Chicken Chowmein', 120.00)">ADD TO
+                                    CART</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -190,7 +251,10 @@
                             <h4>Milk Tea</h4>
                             <div class="drink-info">
                                 <p>Rs. 25</p>
-                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                                <div class="button">
+                                    <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Milk Tea', 25.00)">ADD TO
+                                        CART</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
@@ -198,7 +262,10 @@
                             <h4>Coke</h4>
                             <div class="drink-info">
                                 <p>Rs. 35</p>
-                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                                <div class="button">
+                                    <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Coke', 35.00)">ADD TO
+                                        CART</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -210,7 +277,10 @@
                             <h4>Black Tea</h4>
                             <div class="drink-info">
                                 <p>Rs. 20</p>
-                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                                <div class="button">
+                                    <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Black Tea', 20.00)">ADD TO
+                                        CART</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
@@ -218,7 +288,10 @@
                             <h4>Dahi</h4>
                             <div class="drink-info">
                                 <p>Rs. 40</p>
-                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                                <div class="button">
+                                    <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Dahi', 40.00)">ADD TO
+                                        CART</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -230,7 +303,10 @@
                             <h4>Coffee</h4>
                             <div class="drink-info">
                                 <p>Rs. 35</p>
-                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                                <div class="button">
+                                    <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Coffe', 35.00)">ADD TO
+                                        CART</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
@@ -238,8 +314,9 @@
                             <h4>Lassi</h4>
                             <div class="drink-info">
                                 <p>Rs. 90</p>
-                                <div class="cart-button">
-                                    <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                                <div class="button">
+                                    <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Lassi', 90.00)">ADD TO
+                                        CART</button>
                                 </div>
                             </div>
                         </div>
@@ -252,7 +329,10 @@
                             <h4>Hot Lemon</h4>
                             <div class="drink-info">
                                 <p>Rs. 20</p>
-                                <button class="cart-btn" onclick="addToCart()">&#128722;</button>
+                                <div class="button">
+                                    <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Hot Lemon', 20.00)">ADD TO
+                                        CART</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
@@ -260,17 +340,19 @@
                             <h4>Mango Juice</h4>
                             <div class="drink-info">
                                 <p>Rs. 60</p>
-                                <button id="cartBtn" type="button" onclick="addToCart()">&#128722;</button>
+                                <div class="button">
+                                    <button id="cartBtn" class="add-to-cart-btn" onclick="addToCart('Mango Juice', 60.00)">ADD TO
+                                        CART</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="btn">
-                    <button class="cart"><a href="order.html">GO TO CART</a></button>
-                </div>
+                </div>          
             </section>
+            <div class="btn">
+                <button class="cart"><a href="order.html">GO TO CART</a></button>
+            </div>
         </div>
-
     </main>
     <footer>
         <div class="footer">
@@ -284,7 +366,7 @@
         </div>
     </footer>
 
-
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 
