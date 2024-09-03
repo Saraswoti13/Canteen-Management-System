@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vojan Express</title>
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Habibi,wght@0,400;1,400;" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Habibi&family=IM+Fell+English+SC&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="icon" type="image/svg" href="../images/tab-logo.svg">
+    <link rel="stylesheet" href="css/order.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../images/logo.png" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="profile">
+            <img src="../images/pf.png" alt="Profile Icon">
+            <a href="setting.html">David Wittenberg</a>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="site-main">
+                <aside class="slide">
+                    <h1 class="menu-title">Main Menu</h1>
+                    <ul class="nav-links">
+                        <li><a href="dashboard.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                        <li><a href="menu.html"><i class="fas fa-book"></i> Menu</a></li>
+                        <li><a href="order.html"><i class="fas fa-receipt"></i> Order</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-info-circle"></i> About Us</a></li>
+                        <li><a href="setting.html"><i class="fas fa-cog"></i> Settings</a></li>
+                    </ul>
+                </aside>
+                <div class="container">
+                    <div class="order-list">
+                        <div class="tabs">
+                            <button class="active">Order in</button>
+                            <button>Prepared</button>
+                            <button>Served</button>
+                        </div>
+                        <div class="orders">
+                            <div class="order">
+                                <div class="order-details">
+                                    <h3>Order #1</h3>
+                                    <p>June 1, 2020, 8:22 AM</p>
+                                </div>
+                                <div class="order-price">Rs. 150.00</div>
+                            </div>
+                            <div class="order">
+                                <div class="order-details">
+                                    <h3>Order #2</h3>
+                                    <p>June 1, 2020, 8:15 AM</p>
+                                </div>
+                                <div class="order-price">Rs. 450.00</div>
+                            </div>
+                            <div class="order">
+                                <div class="order-details">
+                                    <h3>Order #3</h3>
+                                    <p>June 1, 2020, 7:45 AM</p>
+                                </div>
+                                <div class="order-price">Rs. 300.00</div>
+                            </div>
+                            <div class="order">
+                                <div class="order-details">
+                                    <h3>Order #4</h3>
+                                    <p>June 1, 2020, 7:25 AM</p>
+                                </div>
+                                <div class="order-price">Rs. 60.00</div>
+                            </div>
+                            <div class="order">
+                                <div class="order-details">
+                                    <h3>Order #5</h3>
+                                    <p>June 1, 2020, 7:15 AM</p>
+                                </div>
+                                <div class="order-price">Rs. 30.00</div>
+                            </div>
+                            <div class="more-orders">
+                                <button>MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-details-view">
+                        <div class="order-summary">
+                            <h3>Order #1</h3>
+                            <p>June 1, 2020, 8:22 AM</p>
+                            <div class="customer-info">
+                                <img src="../images/profile.png" alt="Customer Image">
+                                <p>Nimesh Basnet <br> User since 2020</p>
+                            </div>
+                            <div class="order-menu">
+                                <h3>Order Menu</h3>
+                                <div class="menu-item">
+                                    <img src="../images/samosa.png" alt="Samosa">
+                                    <p>Samosa <span>x1</span></p>
+                                    <p>+Rs. 25</p>
+                                </div>
+                                <div class="menu-item">
+                                    <img src="../images/paratha.png" alt="Samosa">
+                                    <p>Aloo Paratha <span>x1</span></p>
+                                    <p>+Rs. 50</p>
+                                </div>
+                                <div class="menu-item">
+                                    <img src="../images/paneer.png" alt="Samosa">
+                                    <p>Matar Paneer Curry <span>x1</span></p>
+                                    <p>+Rs. 75</p>
+                                </div>
+                                <div class="total-price">
+                                    <p>Total</p>
+                                    <p>Rs. 150</p>
+                                </div>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="prepared-btn">Prepared</button>
+                                <button class="set-time-btn">Set Time</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>Get In Touch</p>
+            <div class="social-icons">
+                <a href="#"><img src="../images/fab.svg" alt="Facebook"></a>
+                <a href="#"><img src="../images/inst.svg" alt="Instagram"></a>
+                <a href="#"><img src="../images/pin.svg" alt="pinterest"></a>
+            </div>
+            <p>&copy; Krima. All Rights Reserved 2024. Licensing</p>
+        </div>
+    </footer>
+
+    <script src="js/chart.js"></script>
+</body>
+</html>
